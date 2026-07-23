@@ -1,0 +1,156 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Monarch Art Vault Work Record",
+  "type": "object",
+  "required": [
+    "work_id",
+    "status",
+    "assets",
+    "provenance"
+  ],
+  "properties": {
+    "work_id": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "needs_review",
+        "cataloged",
+        "approved",
+        "archived",
+        "publish_draft",
+        "published"
+      ]
+    },
+    "title": {
+      "$ref": "#/$defs/provenanced_value"
+    },
+    "artist": {
+      "$ref": "#/$defs/provenanced_value"
+    },
+    "creation_date": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "precision": {
+          "enum": [
+            "day",
+            "month",
+            "year",
+            "unknown"
+          ]
+        },
+        "source": {
+          "type": "string"
+        },
+        "approved": {
+          "type": "boolean"
+        }
+      }
+    },
+    "description": {
+      "type": "object"
+    },
+    "classification": {
+      "type": "object"
+    },
+    "rights": {
+      "type": "object"
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "asset_id",
+          "sha256",
+          "source_path"
+        ],
+        "properties": {
+          "asset_id": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string"
+          },
+          "perceptual_hash": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "source_path": {
+            "type": "string"
+          },
+          "managed_path": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "pixel_width": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "pixel_height": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "exif_capture_date": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "print_readiness": {
+      "type": "object"
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "run_id",
+        "ingested_at"
+      ]
+    }
+  },
+  "$defs": {
+    "provenanced_value": {
+      "type": "object",
+      "properties": {
+        "value": {},
+        "source": {
+          "enum": [
+            "embedded",
+            "user_confirmed",
+            "ai_suggested",
+            "ocr_unverified",
+            "unknown"
+          ]
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "approved": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

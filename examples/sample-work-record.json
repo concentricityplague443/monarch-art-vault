@@ -1,0 +1,50 @@
+{
+  "work_id": "ART-2026-0001",
+  "status": "needs_review",
+  "title": {
+    "value": "Blue Forms at Dusk",
+    "source": "ai_suggested",
+    "confidence": 0.71,
+    "approved": false
+  },
+  "artist": {
+    "value": null,
+    "source": "unknown",
+    "confidence": 0,
+    "approved": false
+  },
+  "creation_date": {
+    "value": null,
+    "precision": "unknown",
+    "source": "unknown",
+    "approved": false
+  },
+  "description": {
+    "short": "Abstract composition with layered blue and charcoal forms.",
+    "source": "ai_suggested",
+    "confidence": 0.76,
+    "approved": false
+  },
+  "assets": [
+    {
+      "asset_id": "AST-2026-0001-A",
+      "role": "master_candidate",
+      "sha256": "example",
+      "source_path": "01_Archive_Originals/2026/RUN-20260723-001/example.jpg",
+      "managed_path": null,
+      "pixel_width": 6000,
+      "pixel_height": 7500,
+      "exif_capture_date": null
+    }
+  ],
+  "print_readiness": {
+    "status": "review_required",
+    "warnings": [
+      "Physical dimensions not confirmed"
+    ]
+  },
+  "provenance": {
+    "run_id": "RUN-20260723-001",
+    "ingested_at": "2026-07-23T00:00:00-05:00"
+  }
+}

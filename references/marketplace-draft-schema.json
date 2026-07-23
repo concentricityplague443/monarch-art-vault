@@ -1,0 +1,28 @@
+{
+  "work_id": "ART-YYYY-NNNN",
+  "platform": "etsy",
+  "status": "draft",
+  "listing": {
+    "title": "",
+    "description": "",
+    "tags": [],
+    "alt_text": "",
+    "category_suggestion": "",
+    "price": null,
+    "currency": "USD",
+    "fulfillment": {
+      "provider": null,
+      "product_ids": []
+    }
+  },
+  "assets": [],
+  "rights_checklist": {
+    "copyright_confirmed": false,
+    "releases_confirmed": false,
+    "sensitive_metadata_removed": true
+  },
+  "approval": {
+    "required": true,
+    "approved": false
+  }
+}

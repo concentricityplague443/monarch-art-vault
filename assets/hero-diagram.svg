@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c9a227"/>
+      <stop offset="100%" style="stop-color:#e8d48a"/>
+    </linearGradient>
+    <linearGradient id="dark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#0f0f1a"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="200" fill="url(#dark)" rx="12"/>
+  
+  <!-- Flow boxes -->
+  <g transform="translate(20, 60)">
+    <!-- Upload -->
+    <rect x="0" y="0" width="100" height="80" rx="8" fill="#16213e" stroke="#c9a227" stroke-width="1.5"/>
+    <text x="50" y="35" text-anchor="middle" fill="#ffffff" font-family="system-ui" font-size="12" font-weight="600">📸 Upload</text>
+    <text x="50" y="55" text-anchor="middle" fill="#888" font-family="system-ui" font-size="10">Photos</text>
+    
+    <!-- Arrow 1 -->
+    <path d="M105 40 L125 40" stroke="url(#gold)" stroke-width="2" fill="none"/>
+    <polygon points="125,35 135,40 125,45" fill="#c9a227"/>
+    
+    <!-- Preserve -->
+    <rect x="140" y="0" width="100" height="80" rx="8" fill="#16213e" stroke="#c9a227" stroke-width="1.5"/>
+    <text x="190" y="35" text-anchor="middle" fill="#ffffff" font-family="system-ui" font-size="12" font-weight="600">🔒 Preserve</text>
+    <text x="190" y="55" text-anchor="middle" fill="#888" font-family="system-ui" font-size="10">Archive originals</text>
+    
+    <!-- Arrow 2 -->
+    <path d="M245 40 L265 40" stroke="url(#gold)" stroke-width="2" fill="none"/>
+    <polygon points="265,35 275,40 265,45" fill="#c9a227"/>
+    
+    <!-- Dedupe -->
+    <rect x="280" y="0" width="100" height="80" rx="8" fill="#16213e" stroke="#c9a227" stroke-width="1.5"/>
+    <text x="330" y="35" text-anchor="middle" fill="#ffffff" font-family="system-ui" font-size="12" font-weight="600">🔍 Dedupe</text>
+    <text x="330" y="55" text-anchor="middle" fill="#888" font-family="system-ui" font-size="10">Find duplicates</text>
+    
+    <!-- Arrow 3 -->
+    <path d="M385 40 L405 40" stroke="url(#gold)" stroke-width="2" fill="none"/>
+    <polygon points="405,35 415,40 405,45" fill="#c9a227"/>
+    
+    <!-- Catalog -->
+    <rect x="420" y="0" width="100" height="80" rx="8" fill="#16213e" stroke="#c9a227" stroke-width="1.5"/>
+    <text x="470" y="35" text-anchor="middle" fill="#ffffff" font-family="system-ui" font-size="12" font-weight="600">📝 Catalog</text>
+    <text x="470" y="55" text-anchor="middle" fill="#888" font-family="system-ui" font-size="10">AI metadata</text>
+    
+    <!-- Arrow 4 -->
+    <path d="M525 40 L545 40" stroke="url(#gold)" stroke-width="2" fill="none"/>
+    <polygon points="545,35 555,40 545,45" fill="#c9a227"/>
+    
+    <!-- Prepare -->
+    <rect x="560" y="0" width="100" height="80" rx="8" fill="#16213e" stroke="#c9a227" stroke-width="1.5"/>
+    <text x="610" y="35" text-anchor="middle" fill="#ffffff" font-family="system-ui" font-size="12" font-weight="600">🖨️ Prepare</text>
+    <text x="610" y="55" text-anchor="middle" fill="#888" font-family="system-ui" font-size="10">Print ready</text>
+    
+    <!-- Arrow 5 -->
+    <path d="M665 40 L685 40" stroke="url(#gold)" stroke-width="2" fill="none"/>
+    <polygon points="685,35 695,40 685,45" fill="#c9a227"/>
+    
+    <!-- Publish -->
+    <rect x="700" y="0" width="80" height="80" rx="8" fill="#16213e" stroke="#00d4aa" stroke-width="2"/>
+    <text x="740" y="35" text-anchor="middle" fill="#ffffff" font-family="system-ui" font-size="12" font-weight="600">🛒 Publish</text>
+    <text x="740" y="55" text-anchor="middle" fill="#00d4aa" font-family="system-ui" font-size="10">Approved</text>
+  </g>
+  
+  <!-- Subtitle -->
+  <text x="400" y="175" text-anchor="middle" fill="#666" font-family="system-ui" font-size="11">One command transforms chaos into a print-ready art catalog</text>
+</svg>

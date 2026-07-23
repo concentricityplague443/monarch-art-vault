@@ -1,0 +1,21 @@
+brand: Monarch
+publisher: Diamitani Industries
+run_id_prefix: RUN
+work_id_prefix: ART
+archive_mode: copy_only
+source_mutation_requires_approval: true
+external_actions_require_approval: true
+remove_gps_from_public_derivatives: true
+retain_face_data_in_public_derivatives: false
+duplicate:
+  exact_method: sha256
+  visual_similarity_requires_review: true
+print:
+  dpi_targets: [300, 240, 150]
+  auto_upscale: false
+storage:
+  managed_root: ./ArtLibrary
+  source_root: ./incoming
+marketplace:
+  default_mode: draft_only
+  enabled: []

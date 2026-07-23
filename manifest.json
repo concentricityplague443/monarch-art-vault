@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "id": "monarch-art-vault",
+  "name": "Monarch Art Vault",
+  "version": "1.1.0",
+  "brand": "Monarch",
+  "publisher": "Diamitani Industries",
+  "repository": "https://github.com/diamitani/monarch-art-vault",
+  "license": "MIT",
+  "entrypoint": "SKILL.md",
+  "keywords": [
+    "art",
+    "photography",
+    "digital-asset-management",
+    "metadata",
+    "print-on-demand",
+    "ecommerce",
+    "google-drive",
+    "google-sheets",
+    "spreadsheet",
+    "catalog",
+    "deduplication",
+    "ai-agent",
+    "claude",
+    "hermes",
+    "etsy",
+    "shopify",
+    "printful"
+  ],
+  "capabilities": [
+    "asset_intake",
+    "metadata_extraction",
+    "checksum_deduplication",
+    "visual_similarity_review",
+    "catalog_generation",
+    "folder_organization",
+    "print_readiness",
+    "marketplace_drafting",
+    "csv_export",
+    "xlsx_export",
+    "google_sheets_sync"
+  ],
+  "approval_required_for": [
+    "source_mutation",
+    "deletion",
+    "sensitive_metadata_export",
+    "external_upload",
+    "listing_creation",
+    "pricing",
+    "fulfillment_configuration",
+    "publication"
+  ],
+  "supported_sources": [
+    "chat_upload",
+    "local_folder",
+    "google_drive",
+    "dropbox",
+    "onedrive"
+  ],
+  "export_formats": [
+    "csv",
+    "xlsx",
+    "google_sheets",
+    "jsonl",
+    "json"
+  ],
+  "optional_targets": [
+    "etsy",
+    "shopify",
+    "printful",
+    "printify",
+    "gelato",
+    "fine_art_america",
+    "squarespace",
+    "woocommerce"
+  ],
+  "python_requires": ">=3.10",
+  "optional_dependencies": {
+    "image": ["Pillow>=10.0.0"],
+    "perceptual": ["imagehash>=4.3.0"],
+    "excel": ["openpyxl>=3.1.0"],
+    "sheets": ["gspread>=5.10.0", "google-auth>=2.20.0"]
+  }
+}
