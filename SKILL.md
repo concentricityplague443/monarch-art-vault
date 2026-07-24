@@ -1,10 +1,10 @@
 ---
 name: monarch-art-vault
 title: Monarch Art Vault
-version: 1.0.0
+version: 1.2.0
 author: Diamitani Industries
 brand: Monarch
-description: Preserve, deduplicate, catalog, organize, prepare, and approval-gate publishing of artist photo and artwork assets.
+description: Preserve, deduplicate, catalog, visually enrich with AI-generated titles and descriptions, embed metadata into EXIF, organize enriched files, prepare, and approval-gate publishing of artist photo and artwork assets.
 license: MIT
 tags:
   - art
@@ -14,6 +14,9 @@ tags:
   - print-on-demand
   - ecommerce
   - google-drive
+  - ai-vision
+  - exif
+  - image-enrichment
 ---
 
 # Monarch Art Vault
@@ -81,6 +84,31 @@ Send near duplicates, variants, and uncertain groups to `04_Review_Required/Poss
 Create one work record only when grouping confidence is sufficient; otherwise create an `unassigned_asset` record. Use `references/metadata-schema.json`.
 
 Generate drafts for: title, short and long description, visible subjects, style terms, palette, orientation, tags, alt text, and potential medium/category. Every non-embedded field needs `source`, `confidence`, and `approved` attributes. OCR text must be labeled `ocr_unverified`.
+
+### 4a. Visual enrichment (AI vision pipeline)
+
+When the `enrich_assets.py` script is run, apply the **PAL (Prompt Abstraction Layer) method** to every image:
+
+1. **Intent extraction** — identify core subject, scene type, mood, and emotional energy
+2. **Context injection** — consider genre (street, portrait, architecture, event, nature, abstract), lighting, and composition
+3. **Prompt enhancement** — surface the deeper meaning and story the image tells
+
+For each asset generate:
+- `title` — creative, evocative 4–8 word title (`ai_suggested`, `approved: false`)
+- `description` — vivid 2–3 sentence gallery-style caption (`ai_suggested`, `approved: false`)
+- `tags` — up to 10 descriptive tags
+- `mood` — single-word emotional tone
+- `scene_type` — genre classification
+
+Write enriched metadata directly into EXIF fields on JPEG copies:
+- `ImageDescription` → description (ASCII)
+- `XPTitle` → title (UTF-16LE)
+- `XPComment` → description (UTF-16LE)
+- `XPKeywords` → semicolon-separated tags (UTF-16LE)
+
+Output enriched image copies to `06_Enriched/{run_id}/` with descriptive filenames: `{original_id}_{safe-title}{ext}`. Write a JSON sidecar per image alongside each enriched file. Append all records to `02_Catalog/{run_id}_enrichment.jsonl`.
+
+All AI-generated fields are marked `ai_suggested` and `approved: false`. User must explicitly approve before any external use.
 
 ### 5. Organize managed copies
 
